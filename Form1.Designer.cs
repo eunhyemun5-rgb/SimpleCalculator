@@ -127,6 +127,7 @@
             button4.TabIndex = 6;
             button4.Text = "÷";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -169,6 +170,7 @@
             button8.TabIndex = 10;
             button8.Text = "X";
             button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
             // 
             // button9
             // 
@@ -211,6 +213,7 @@
             button12.TabIndex = 14;
             button12.Text = "-";
             button12.UseVisualStyleBackColor = true;
+            button12.Click += button12_Click;
             // 
             // button13
             // 

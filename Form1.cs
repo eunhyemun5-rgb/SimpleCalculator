@@ -53,13 +53,29 @@ namespace SimpleCalculator
         private void button20_Click(object sender, EventArgs e)
         {
             int secondNumber = int.Parse(textBox1.Text);
+            int result = 0; 
             if (currentOperator == "+")
             {
-                int result = storedNumber + secondNumber;
-
-                textBox1.Text = storedNumber.ToString() + " + " + secondNumber.ToString() + " =";
-                textBox2.Text = result.ToString();
+                result = storedNumber + secondNumber;
             }
+            else if (currentOperator == "-")
+            {
+                result = storedNumber - secondNumber;
+            }
+            else if (currentOperator == "*")
+            {
+                result = storedNumber * secondNumber;
+            }
+            else if (currentOperator == "/")
+            {
+                result = storedNumber / secondNumber;
+            }
+
+            
+            textBox1.Text = storedNumber.ToString() + " " + currentOperator + " " + secondNumber.ToString() + " = " + result.ToString();
+
+            
+            textBox2.Text = result.ToString();
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -167,6 +183,36 @@ namespace SimpleCalculator
             else
             {
                 textBox1.Text = textBox1.Text + "9";
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                storedNumber = int.Parse(textBox1.Text);
+                currentOperator = "-";
+                textBox1.Text = "";
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                storedNumber = int.Parse(textBox1.Text);
+                currentOperator = "*";
+                textBox1.Text = "";
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                storedNumber = int.Parse(textBox1.Text);
+                currentOperator = "/"; 
+                textBox1.Text = "";
             }
         }
     }
